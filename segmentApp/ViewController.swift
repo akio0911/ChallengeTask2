@@ -9,8 +9,10 @@ import UIKit
 
 final class ViewController: UIViewController {
     
-    @IBOutlet weak private var segmentControll: UISegmentedControl!
-    @IBOutlet weak private var label: UILabel!
+    @IBOutlet private weak var segmentControll: UISegmentedControl!
+    @IBOutlet private weak var label: UILabel!
+    @IBOutlet private weak var textField1: UITextField!
+    @IBOutlet private weak var textField2: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,20 +22,22 @@ final class ViewController: UIViewController {
     }
     
     @IBAction func segmentButtonPressed(_ sender: UISegmentedControl) {
+        let num1 = Double(textField1.text ?? "") ?? 0
+        let num2 = Double(textField2.text ?? "") ?? 0
+        
         switch segmentControll.selectedSegmentIndex {
         case 0:
-            print("Tap 0")
-            let a = 1 + 1
-            label.text = String(a)
+            label.text = String(num1 + num2)
         case 1:
-            print("Tap 1")
-            label.text = "1"
+            label.text = String(num1 - num2)
         case 2:
-            print("Tap 2")
-            label.text = "2"
+            label.text = String(num1 * num2)
         case 3:
-            print("Tap 3")
-            label.text = "3"
+            if (num1 / num2).isInfinite {
+                label.text = "0で割ることはできません"
+            } else {
+                label.text = String(num1 / num2)
+            }
         default:
             print("NONE")
             label.text = "NONE"
