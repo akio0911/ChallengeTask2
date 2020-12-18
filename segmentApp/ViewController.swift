@@ -28,19 +28,23 @@ final class ViewController: UIViewController {
         switch segmentControll.selectedSegmentIndex {
         case 0:
             label.text = String(num1 + num2)
+            break;
         case 1:
             label.text = String(num1 - num2)
+            break;
         case 2:
             label.text = String(num1 * num2)
+            break;
         case 3:
             if (num1 / num2).isInfinite {
                 label.text = "0で割ることはできません"
             } else {
                 label.text = String(num1 / num2)
             }
+            break;
         default:
-            print("NONE")
             label.text = "NONE"
+            break;
         }
     }
 }
