@@ -29,11 +29,19 @@
                                     <action selector="segmentButtonPressed:" destination="BYZ-38-t0r" eventType="valueChanged" id="Dib-pC-9fX"/>
                                 </connections>
                             </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="irp-ng-EAL">
+                                <rect key="frame" x="109" y="243" width="188" height="71"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
+                        <outlet property="label" destination="irp-ng-EAL" id="p51-vy-6v0"/>
                         <outlet property="segmentControll" destination="XFI-pb-crs" id="p5a-eG-aBl"/>
                     </connections>
                 </viewController>
